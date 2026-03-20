@@ -1,16 +1,73 @@
-# React + Vite
+# Ganesh Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A personal portfolio project built with React and Vite. The current version is an early-stage foundation for a developer portfolio and already includes a custom loading screen, dark theme styling, and a branded navigation bar.
 
-Currently, two official plugins are available:
+## Current Status
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This repository is still in progress. Right now, the implemented UI focuses on the first layer of the experience:
 
-## React Compiler
+- Animated loading screen that types `<Ganesh/>`
+- Fixed top navigation bar with portfolio branding
+- Dark visual theme with `Space Grotesk` typography
+- Placeholder section files for `Home`, `About`, `Projects`, and `Contact`
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tech Stack
 
-## Expanding the ESLint configuration
+- React 19
+- Vite 7
+- Tailwind CSS via `@tailwindcss/vite`
+- ESLint 9
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Project Structure
+
+```text
+src/
+  App.jsx
+  main.jsx
+  index.css
+  components/
+    LoadingScreen.jsx
+    Navbar.jsx
+    section/
+      Home.jsx
+      About.jsx
+      Project.jsx
+      contact.jsx
+```
+
+## Getting Started
+
+1. Install the base dependencies:
+
+```bash
+npm install
+```
+
+2. Install the Tailwind packages used by the current Vite config:
+
+```bash
+npm install -D tailwindcss @tailwindcss/vite
+```
+
+3. Start the development server:
+
+```bash
+npm run dev
+```
+
+4. Create a production build when needed:
+
+```bash
+npm run build
+```
+
+## Notes
+
+- The app entry point is `src/App.jsx`.
+- The loading animation lives in `src/components/LoadingScreen.jsx`.
+- Navigation branding lives in `src/components/Navbar.jsx`.
+- The section components inside `src/components/section/` are currently scaffolds and still need full content.
+
+## License
+
+This project is for personal portfolio use.
